@@ -1,9 +1,20 @@
 package com.github.atcw.client;
 
-public class Main {
+import com.github.atcw.client.gui.SuperController;
+import com.github.atcw.client.gui.network.Network;
+import com.google.common.eventbus.EventBus;
+import javafx.application.Application;
+import javafx.stage.Stage;
 
-	public static void main(String[] args) {
+public class Main extends Application {
 
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		Network network = new Network();
+		network.registerOutput();
+		network.launch();
+
+		SuperController superController = new SuperController(network);
+		superController.openLogin();
 	}
-
 }
