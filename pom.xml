@@ -12,6 +12,12 @@
         </project.build.sourceEncoding>
     </properties>
 
+    <modules>
+        <module>client</module>
+        <module>server</module>
+        <module>shared</module>
+    </modules>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
